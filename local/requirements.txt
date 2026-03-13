@@ -1,0 +1,4 @@
+gradio==6.9.0
+numpy==2.4.3
+opencv_python==4.11.0.86
+Requests==2.32.5

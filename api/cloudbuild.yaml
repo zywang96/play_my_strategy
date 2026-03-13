@@ -1,0 +1,18 @@
+steps:
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: gcloud
+  args:
+    [
+      "run",
+      "deploy",
+      "${_SERVICE_NAME}",
+      "--source",
+      ".",
+      "--region",
+      "${_REGION}",
+      "--allow-unauthenticated",
+      "--set-env-vars",
+      "GEMINI_MODEL=gemini-3-flash-preview,ALLOW_ORIGINS=*",
+      "--update-secrets",
+      "GEMINI_API_KEY=gemini-api-key:latest"
+    ]
