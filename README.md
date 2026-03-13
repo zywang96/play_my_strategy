@@ -68,9 +68,7 @@ The backend is designed for direct deployment to **Google Cloud Run** using the 
 From the `api/` directory, run:
 
 ```bash
-gcloud builds submit \
-  --config=cloudbuild.yaml \
-  --substitutions=_SERVICE_NAME=YOUR_SERVICE_NAME,_REGION=YOUR_REGION
+gcloud builds submit --config=cloudbuild.yaml --substitutions=_SERVICE_NAME=YOUR_SERVICE_NAME,_REGION=YOUR_REGION
 ```
 
 
